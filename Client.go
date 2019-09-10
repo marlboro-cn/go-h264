@@ -7,6 +7,7 @@ import (
 	"os"
 )
 
+//nnnnn
 func main() {
 	//接收终端输入的数据
 	Start(os.Args[1])
