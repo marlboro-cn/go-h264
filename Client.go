@@ -6,6 +6,7 @@ import (
 	"net"
 	"os"
 )
+
 func main() {
 	//接收终端输入的数据
 	Start(os.Args[1])
@@ -29,6 +30,7 @@ func Start(tcpAddrStr string) {
 	//从服务器接收信息
 	buf := make([]byte, 1024)
 	for {
+		//使用buf缓冲
 		lenth, err := conn.Read(buf)
 		if err != nil {
 			log.Printf("Recv server msg failed:%v\n", err)
